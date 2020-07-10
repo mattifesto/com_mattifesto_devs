@@ -2,6 +2,10 @@
 
 final class DVBlogPostPageTemplate {
 
+    /* -- CBInstall interfaces -- -- -- -- -- */
+
+
+
     /**
      * @return void
      */
@@ -13,11 +17,19 @@ final class DVBlogPostPageTemplate {
      * @return [string]
      */
     static function CBInstall_requiredClassNames(): array {
-        return ['CBModelTemplateCatalog'];
+        return [
+            'CBModelTemplateCatalog'
+        ];
     }
 
+
+
+    /* -- CBModelTemplate interfaces -- -- -- -- -- */
+
+
+
     /**
-     * @return model
+     * @return object
      */
     static function CBModelTemplate_spec(): stdClass {
         return (object)[
@@ -26,20 +38,12 @@ final class DVBlogPostPageTemplate {
             'classNameForSettings' => 'DVPageSettings',
             'frameClassName' => 'DVPageFrame',
             'selectedMainMenuItemName' => 'blog',
-            'sections' => [
-                (object)[
-                    'className' => 'CBPageTitleAndDescriptionView',
-                    'showPublicationDate' => true,
-                ],
-                (object)[
-                    'className' => 'CBArtworkView',
-                ],
-                (object)[
-                    'className' => 'CBMessageView',
-                ],
-            ],
+            'sections' => CBDefaults_BlogPost::viewSpecs(),
         ];
     }
+    /* CBModelTemplate_spec() */
+
+
 
     /**
      * @return string
@@ -47,4 +51,5 @@ final class DVBlogPostPageTemplate {
     static function CBModelTemplate_title(): string {
         return 'Blog Post';
     }
+
 }
