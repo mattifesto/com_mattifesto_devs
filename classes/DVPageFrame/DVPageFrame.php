@@ -1,6 +1,7 @@
 <?php
 
-final class DVPageFrame {
+final class
+DVPageFrame {
 
     /**
      * @return void
@@ -9,12 +10,16 @@ final class DVPageFrame {
         CBPageFrameCatalog::install(__CLASS__);
     }
 
+
+
     /**
      * @return [string]
      */
     static function CBInstall_requiredClassNames(): array {
         return ['CBPageFrameCatalog'];
     }
+
+
 
     /**
      * @param function $renderContent
@@ -32,4 +37,17 @@ final class DVPageFrame {
             'className' => 'DVPageFooterView',
         ]);
     }
+
+
+
+    /**
+     * @return string
+     */
+    static function
+    CBPageFrame_replacementPageFrameClassName(
+    ): string {
+        return 'CB_StandardPageFrame';
+    }
+    /* CBPageFrame_replacementPageFrameClassName() */
+
 }
