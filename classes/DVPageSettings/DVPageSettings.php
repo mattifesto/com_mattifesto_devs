@@ -1,6 +1,23 @@
 <?php
 
-final class DVPageSettings {
+final class
+DVPageSettings {
+
+    /* -- CBHTMLOutput interfaces -- */
+
+
+
+    /**
+     * @return string
+     */
+    static function
+    CBHTMLOutput_replacementClassNameForPageSettings(
+    ): string {
+        return 'CB_StandardPageSettings';
+    }
+    /* CBHTMLOutput_replacementClassNameForPageSettings() */
+
+
 
     /**
      * @return void
@@ -9,6 +26,8 @@ final class DVPageSettings {
         CBPageSettingsCatalog::install(__CLASS__);
     }
 
+
+
     /**
      * @return [string]
      */
@@ -16,12 +35,16 @@ final class DVPageSettings {
         return ['CBPageSettingsCatalog'];
     }
 
+
+
     /**
      * @return [string]
      */
     static function CBPageSettings_htmlElementClassNames(): array {
         return ['CBLightTheme', 'CBStyleSheet'];
     }
+
+
 
     /**
      * @return [string]
@@ -34,4 +57,5 @@ final class DVPageSettings {
             'CBFacebookPageSettingsPart',
         ];
     }
+
 }
