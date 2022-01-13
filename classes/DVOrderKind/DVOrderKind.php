@@ -1,6 +1,7 @@
 <?php
 
-final class DVOrderKind {
+final class
+DVOrderKind {
 
     /* -- CBInstall interfaces -- -- -- -- -- */
 
@@ -21,7 +22,13 @@ final class DVOrderKind {
             __CLASS__
         );
 
-        $updater->save2();
+        CBDB::transaction(
+            function () use (
+                $updater
+            ) {
+                $updater->save2();
+            }
+        );
     }
     /* CBInstall_configure() */
 
