@@ -58,16 +58,16 @@
         },
         {
             "name": "mattifesto/colby",
-            "version": "v2023.1.2",
+            "version": "v2023.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mattifesto/colby.git",
-                "reference": "c0224e721a2e05dd7921dfccbacd4059770c7646"
+                "reference": "bf0dc4c00558f9845647a3640df47fc1bf648bb2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mattifesto/colby/zipball/c0224e721a2e05dd7921dfccbacd4059770c7646",
-                "reference": "c0224e721a2e05dd7921dfccbacd4059770c7646",
+                "url": "https://api.github.com/repos/mattifesto/colby/zipball/bf0dc4c00558f9845647a3640df47fc1bf648bb2",
+                "reference": "bf0dc4c00558f9845647a3640df47fc1bf648bb2",
                 "shasum": ""
             },
             "require": {
@@ -97,9 +97,9 @@
             "description": "content management system",
             "support": {
                 "issues": "https://github.com/mattifesto/colby/issues",
-                "source": "https://github.com/mattifesto/colby/tree/v2023.1.2"
+                "source": "https://github.com/mattifesto/colby/tree/v2023.1.3"
             },
-            "time": "2023-08-13T20:01:50+00:00"
+            "time": "2023-08-14T01:05:30+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
